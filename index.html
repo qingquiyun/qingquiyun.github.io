@@ -1,97 +1,1046 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <title>91</title>
-        <style type="text/css">
-            body{
-                text-align:center;
-                background-color: #2a2d3e;
-                color:white;
-                padding: 100px;
-              }
-              .box{
-                  width: 550px;
-                  height:150px;
-                  background-color:rgba(0,0,0,0.2);
-                  margin: 70px auto;
-                  border-radius: 25px;
-                  padding: 10px 0;
-                }
-              .aa{
-                  width: 550px;
-                  height:100px;
-                  background-color:rgba(0,0,0,0.2);
-                  margin: 70px auto;
-                  border-radius: 25px;
-                  padding: 10px 0;
-                }
-               .a{
-                  width: 100px;
-                  height:10px;
-                  background-color:rgba(0,0,0,0.2);
-                  margin: 70px auto;
-                  border-radius: 25px;
-                  padding: 10px 0;
-                }
-               .b{
-                  width: 550px;
-                  height: 150px;
-                  background-color:orange;
-                  margin: 70px auto;
-                  border-radius: 25px;
-                  padding: 10px 0;
-                }
-              .tp{
-                 width:95px;
-                }
-               .c{
-                 text-shadow:1px 1px 4px
-                }
-        </style>
-    </head>
-    <body>
-        <img src="b.png" class="tp">
-        <h1 style="text-shadow:-1px -1px 6px">91专区</h1>
-        <style>
-             i{
-              color: white;
-              text-shadow:1px 1px 5px;
-              }
-        </style>
-        <i>91视频，搜你所想</i>
-        <h1>点击下方搜索</h1>
-        <input type="text"/>
-        <div class="b">
-        <h1 class="c" style="color: yellow">编辑推荐：斌</h1>
-        <p style="color: green">斌の奇妙后宫</p>
-        <a href="114514">（点击观看）</a>
-        <div class="box">
-        <h1>东北雨姐</h1>
-        <p>东北雨姐，东北第一汗脚大玉足，带派不老铁？</p>
-        <a href="https://www.coolapk.com/apk/coding.yu.pythoncompiler.new">（点击观看）</a>
-        <div class="box">
-        <h1>斌</h1>
-        <p>绝命楠良斌为了赚钱养群中的管理员只能卖钩子</p>
-        <a href="https://www.coolapk.com/apk/coding.yu.ccompiler.new">（点击观看）</a>
-        <div class="box">
-        <h1>鱼u</h1>
-        <p>冰山美人鱼u被人下毒，跪着求斌帮他解毒，还叫他主人</p>
-        <a href="114514">（点击观看）</a>
-        <div class="box">
-        <h1>青丘云*沉吟</h1>
-        <p>流落街头的无助少女青丘云被沉吟捡走，青丘云为了报答他居然做出这种事情</p>
-        <a href="114514">（点击观看）</a>
-        <div class="aa">
-        <h1>更多精彩内容即将呈现...</h1>
-        <p>......</p>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepseek-R1 青丘云·硅基流动</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --primary-color: #4361ee;
+            --secondary-color: #3a56d9;
+            --accent-color: #4cc9f0;
+            --user-bubble: #4361ee;
+            --ai-bubble: #f5f7fb;
+            --header-bg: #f8f9fa;
+            --header-text: #333333;
+            --input-bg: #ffffff;
+            --input-border: #e0e0e0;
+            --input-text: #333333;
+            --button-bg: #4361ee;
+            --button-text: #ffffff;
+            --thinking-bg: #f0f4f8;
+            --context-info-bg: #f0f4f8;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --border-radius: 12px;
+            --message-border-radius: 18px;
+        }
+
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --primary-color: #5a7eff;
+            --secondary-color: #4a6bef;
+            --accent-color: #4cc9f0;
+            --user-bubble: #5a7eff;
+            --ai-bubble: #2a2a2a;
+            --header-bg: #2a2a2a;
+            --header-text: #f0f0f0;
+            --input-bg: #2a2a2a;
+            --input-border: #3a3a3a;
+            --input-text: #f0f0f0;
+            --button-bg: #5a7eff;
+            --button-text: #ffffff;
+            --thinking-bg: #252525;
+            --context-info-bg: #252525;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            color: var(--header-text);
+            padding: 1.2rem 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--input-border);
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        .main-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 1rem;
+        }
+
+        .chat-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--bg-color);
+            border-radius: var(--border-radius);
+        }
+
+        .chat-box {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1rem 0.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            max-height: 60vh;
+        }
+
+        .message {
+            max-width: 85%;
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .message-content {
+            padding: 0.9rem 1.2rem;
+            border-radius: var(--message-border-radius);
+            line-height: 1.6;
+            box-shadow: var(--shadow);
+            word-break: break-word;
+            white-space: pre-wrap;
+        }
+
+        .user-message {
+            align-self: flex-end;
+        }
+
+        .user-message .message-content {
+            background-color: var(--user-bubble);
+            color: white;
+            border-bottom-right-radius: 4px;
+        }
+
+        .ai-message {
+            align-self: flex-start;
+        }
+
+        .ai-message .message-content {
+            background-color: var(--ai-bubble);
+            color: var(--text-color);
+            border-bottom-left-radius: 4px;
+        }
+
+        .input-container {
+            position: relative;
+        }
+
+        .input-area {
+            display: flex;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+            padding: 0 0.5rem;
+        }
+
+        #user-input {
+            flex: 1;
+            padding: 0.9rem 1.2rem;
+            border: 1px solid var(--input-border);
+            border-radius: var(--border-radius);
+            background-color: var(--input-bg);
+            color: var(--input-text);
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        #user-input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(var(--primary-color), 0.1);
+        }
+
+        #send-button {
+            padding: 0 1.8rem;
+            background-color: var(--button-bg);
+            color: var(--button-text);
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: background-color 0.2s, transform 0.1s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #send-button:hover:not(:disabled) {
+            background-color: var(--secondary-color);
+        }
+
+        #send-button:active:not(:disabled) {
+            transform: scale(0.98);
+        }
+
+        #send-button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            padding: 0 0.5rem;
+        }
+
+        .control-button {
+            padding: 0.6rem 1.2rem;
+            background-color: var(--button-bg);
+            color: var(--button-text);
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background-color 0.2s, transform 0.1s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .control-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .control-button:active {
+            transform: scale(0.98);
+        }
+
+        .context-info {
+            background-color: var(--context-info-bg);
+            border-radius: var(--border-radius);
+            padding: 0.7rem 1rem;
+            font-size: 0.8rem;
+            text-align: center;
+            margin-top: auto;
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+
+        /* 思考中指示器样式 */
+        .thinking-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: var(--text-color);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--ai-bubble);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            width: fit-content;
+            height: 40px;
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            margin: 0 0.5rem 0.5rem;
+            max-width: calc(100% - 1rem);
+            min-width: 200px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .thinking-indicator:hover {
+            background-color: var(--thinking-bg);
+        }
+
+        .thinking-timer {
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            font-weight: 500;
+            min-width: 40px;
+            text-align: right;
+        }
+
+        .thinking-dots {
+            display: flex;
+            gap: 0.3rem;
+            flex: 1;
+        }
+
+        .thinking-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            animation: thinkingAnimation 1.4s infinite ease-in-out;
+        }
+
+        .thinking-dot:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .thinking-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .thinking-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes thinkingAnimation {
+            0%, 60%, 100% { 
+                transform: translateY(0); 
+                opacity: 0.4;
+            }
+            30% { 
+                transform: translateY(-3px); 
+                opacity: 1;
+            }
+        }
+
+        /* 进度条样式 */
+        .thinking-progress {
+            width: 60px;
+            height: 4px;
+            background-color: var(--thinking-bg);
+            border-radius: 2px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .thinking-progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+            transition: width 0.3s ease;
+            position: relative;
+        }
+
+        .thinking-progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .api-status {
+            background-color: var(--context-info-bg);
+            border-radius: var(--border-radius);
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .status-online {
+            color: #10b981;
+        }
+
+        .status-offline {
+            color: #ef4444;
+        }
+
+        /* 模态框样式 */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background-color: var(--bg-color);
+            border-radius: var(--border-radius);
+            width: 90%;
+            max-width: 500px; /* 缩小模态框宽度 */
+            max-height: 70vh;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            transform: translateY(-20px);
+            transition: transform 0.3s;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--input-border);
+        }
+
+        .modal-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .modal-button {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            color: var(--text-color);
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.2s;
+        }
+
+        .modal-button:hover {
+            background-color: var(--thinking-bg);
+        }
+
+        .modal-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0.5rem 0;
+            white-space: pre-wrap;
+            line-height: 1.6;
+            background-color: var(--thinking-bg);
+            border-radius: 8px;
+            padding: 1rem;
+            font-size: 0.9rem;
+            min-height: 150px;
+        }
+
+        .modal-footer {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .modal-footer-button {
+            padding: 0.6rem 1.2rem;
+            background-color: var(--button-bg);
+            color: var(--button-text);
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .modal-footer-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .message {
+                max-width: 90%;
+            }
+            
+            .main-container {
+                padding: 0.8rem;
+            }
+            
+            header {
+                padding: 1rem;
+            }
+            
+            header h1 {
+                font-size: 1.3rem;
+            }
+            
+            #user-input {
+                padding: 0.8rem 1rem;
+            }
+            
+            #send-button {
+                padding: 0 1.4rem;
+            }
+            
+            .chat-box {
+                max-height: 50vh;
+            }
+            
+            .thinking-indicator {
+                padding: 0.4rem 0.8rem;
+                height: 36px;
+            }
+            
+            .thinking-timer {
+                min-width: 35px;
+            }
+            
+            .thinking-progress {
+                width: 50px;
+            }
+            
+            .modal-content {
+                width: 95%;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Deepseek-R1 硅基流动版·青丘云</h1>
+        <p>基于硅基流动API的智能对话系统，为您提供专业、准确的解答</p>
+        <p>青丘云·硅基流动</p>
+    </header>
+    
+    <div class="main-container">
+        <div class="controls">
+            <button id="clear-chat" class="control-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 6h18"></path>
+                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                </svg>
+                清除对话
+            </button>
+            <button id="toggle-theme" class="control-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <path d="M12 1v2"></path>
+                    <path d="M12 21v2"></path>
+                    <path d="M4.22 4.22l1.42 1.42"></path>
+                    <path d="M18.36 18.36l1.42 1.42"></path>
+                    <path d="M1 12h2"></path>
+                    <path d="M21 12h2"></path>
+                    <path d="M4.22 19.78l1.42-1.42"></path>
+                    <path d="M18.36 5.64l1.42-1.42"></path>
+                </svg>
+                切换主题
+            </button>
         </div>
-    </body>
+        
+        <div class="api-status" id="api-status">
+            状态: <span class="status-online">硅基流动API连接正常</span>
+        </div>
+        
+        <div class="chat-container">
+            <div class="chat-box" id="chat-box">
+                <!-- 初始欢迎消息 -->
+                <div class="message ai-message">
+                    <div class="message-content">
+                        您好！我是基于DeepSeek-R1模型的AI助手，现在通过硅基流动API为您服务。请问有什么可以帮助您的吗？
+                    </div>
+                </div>
+            </div>
+            
+            <div class="input-container">
+                <div class="input-area">
+                    <input type="text" id="user-input" placeholder="输入您的问题..." autocomplete="off">
+                    <button id="send-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="context-info" id="context-info">
+                系统正在使用上下文（记忆最近3轮对话）
+            </div>
+        </div>
+    </div>
+
+    <!-- 思考内容模态框 -->
+    <div class="modal-overlay" id="thinking-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">思考过程</h3>
+                <div class="modal-actions">
+                    <button class="modal-button" id="refresh-thinking">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.1-5.5M22 12.5a10 10 0 0 1-18.1 5.5"/>
+                        </svg>
+                    </button>
+                    <button class="modal-button" id="modal-close">&times;</button>
+                </div>
+            </div>
+            <div class="modal-body" id="modal-thinking-content">
+                <!-- 思考内容将在这里显示 -->
+            </div>
+            <div class="modal-footer">
+                <button class="modal-footer-button" id="modal-close-btn">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 常量定义
+        const STORAGE_KEY = 'ai_chat_history';
+        const THEME_KEY = 'ai_chat_theme';
+
+        // 硅基流动API配置
+        const SILICONFLOW_API_KEY = 'sk-wqyszwnkwekbsrniojalxgsmdyhirmycurzsfsdzqxmofshf';
+        const SILICONFLOW_API_URL = 'https://api.siliconflow.cn/v1/chat/completions';
+        const MODEL_NAME = 'deepseek-ai/DeepSeek-R1';
+
+        // DOM元素
+        const chatBox = document.getElementById('chat-box');
+        const userInput = document.getElementById('user-input');
+        const sendButton = document.getElementById('send-button');
+        const clearChatButton = document.getElementById('clear-chat');
+        const toggleThemeButton = document.getElementById('toggle-theme');
+        const contextInfo = document.getElementById('context-info');
+        const apiStatus = document.getElementById('api-status');
+        const inputContainer = document.querySelector('.input-container');
+        const thinkingModal = document.getElementById('thinking-modal');
+        const modalThinkingContent = document.getElementById('modal-thinking-content');
+        const modalCloseBtn = document.getElementById('modal-close-btn');
+        const modalClose = document.getElementById('modal-close');
+        const refreshThinkingBtn = document.getElementById('refresh-thinking');
+
+        // 状态变量
+        let chatHistory = [];
+        let currentAiMessageElement = null;
+        let isGenerating = false;
+        let thinkingTimer = null;
+        let thinkingStartTime = null;
+        let thinkingIndicator = null;
+        let currentThinkingContent = '';
+        let thinkingProcessElement = null;
+        let currentMessageId = null;
+
+        // 初始化
+        function init() {
+            loadChatHistory();
+            loadTheme();
+            setupEventListeners();
+            updateContextInfo();
+            testAPIStatus();
+        }
+
+        // 设置事件监听
+        function setupEventListeners() {
+            sendButton.addEventListener('click', sendMessage);
+            userInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    sendMessage();
+                }
+            });
+            clearChatButton.addEventListener('click', clearChat);
+            toggleThemeButton.addEventListener('click', toggleTheme);
+            modalCloseBtn.addEventListener('click', closeModal);
+            modalClose.addEventListener('click', closeModal);
+            refreshThinkingBtn.addEventListener('click', refreshThinkingContent);
+            thinkingModal.addEventListener('click', (e) => {
+                if (e.target === thinkingModal) {
+                    closeModal();
+                }
+            });
+        }
+
+        // 测试API状态
+        async function testAPIStatus() {
+            try {
+                const response = await fetch('https://api.siliconflow.cn/v1/models', {
+                    headers: {
+                        'Authorization': `Bearer ${SILICONFLOW_API_KEY}`
+                    }
+                });
+                
+                if (response.ok) {
+                    apiStatus.innerHTML = '状态: <span class="status-online">硅基流动API连接正常</span>';
+                } else {
+                    apiStatus.innerHTML = '状态: <span class="status-offline">API连接异常</span>';
+                }
+            } catch (error) {
+                apiStatus.innerHTML = '状态: <span class="status-offline">网络连接失败</span>';
+            }
+        }
+
+        // 发送消息
+        async function sendMessage() {
+            if (isGenerating) return;
+            
+            const message = userInput.value.trim();
+            if (!message) return;
+
+            // 禁用输入和按钮
+            isGenerating = true;
+            userInput.disabled = true;
+            sendButton.disabled = true;
+
+            // 添加用户消息到聊天框
+            addMessage('user', message);
+            userInput.value = '';
+
+            // 显示AI正在思考
+            showThinkingIndicator();
+
+            try {
+                // 调用硅基流动API
+                await callSiliconFlowAPI(message);
+            } catch (error) {
+                console.error('API调用失败:', error);
+                addMessage('assistant', '抱歉，服务暂时不可用，请稍后重试。');
+            } finally {
+                // 停止思考计时器
+                stopThinkingTimer();
+                // 重新启用输入和按钮
+                isGenerating = false;
+                userInput.disabled = false;
+                sendButton.disabled = false;
+                userInput.focus();
+            }
+        }
+
+        // 显示思考指示器
+        function showThinkingIndicator() {
+            thinkingIndicator = document.createElement('div');
+            thinkingIndicator.className = 'thinking-indicator';
+            thinkingIndicator.id = 'thinking-indicator';
+            
+            thinkingIndicator.innerHTML = `
+                <div class="thinking-dots">
+                    <div class="thinking-dot"></div>
+                    <div class="thinking-dot"></div>
+                    <div class="thinking-dot"></div>
+                </div>
+                <span>AI正在思考中</span>
+                <div class="thinking-progress">
+                    <div class="thinking-progress-bar" id="thinking-progress-bar"></div>
+                </div>
+                <div class="thinking-timer" id="thinking-timer">0.0</div>
+            `;
+            
+            // 点击思考指示器显示思考模态框
+            thinkingIndicator.addEventListener('click', () => {
+                showThinkingModal();
+            });
+            
+            inputContainer.appendChild(thinkingIndicator);
+            
+            // 开始计时
+            startThinkingTimer();
+        }
+
+        // 显示思考模态框
+        function showThinkingModal() {
+            // 更新模态框内容
+            updateModalThinkingContent();
+            thinkingModal.classList.add('active');
+        }
+
+        // 更新模态框中的思考内容
+        function updateModalThinkingContent() {
+            if (currentThinkingContent) {
+                modalThinkingContent.textContent = currentThinkingContent;
+            } else {
+                modalThinkingContent.textContent = '暂无思考内容';
+            }
+        }
+
+        // 刷新思考内容
+        function refreshThinkingContent() {
+            updateModalThinkingContent();
+        }
+
+        // 关闭模态框
+        function closeModal() {
+            thinkingModal.classList.remove('active');
+        }
+
+        // 开始思考计时器
+        function startThinkingTimer() {
+            thinkingStartTime = Date.now();
+            thinkingTimer = setInterval(() => {
+                const elapsedSeconds = (Date.now() - thinkingStartTime) / 1000;
+                const timerElement = document.getElementById('thinking-timer');
+                const progressBar = document.getElementById('thinking-progress-bar');
+                
+                if (timerElement) {
+                    timerElement.textContent = `${elapsedSeconds.toFixed(1)}`;
+                }
+                
+                if (progressBar) {
+                    // 进度条在0-80%之间循环，避免达到100%
+                    const progress = (elapsedSeconds % 8) * 12.5;
+                    progressBar.style.width = `${progress}%`;
+                }
+            }, 100); // 每0.1秒更新一次
+        }
+
+        // 停止思考计时器
+        function stopThinkingTimer() {
+            if (thinkingTimer) {
+                clearInterval(thinkingTimer);
+                thinkingTimer = null;
+            }
+            
+            // 移除思考指示器
+            if (thinkingIndicator) {
+                thinkingIndicator.remove();
+                thinkingIndicator = null;
+            }
+        }
+
+        // 调用硅基流动API
+        async function callSiliconFlowAPI(prompt) {
+            // 重置思考内容
+            currentThinkingContent = '';
+            currentMessageId = Date.now().toString(); // 为当前消息生成唯一ID
+            
+            // 创建AI消息元素
+            currentAiMessageElement = createMessageElement('assistant');
+            const messageContent = currentAiMessageElement.querySelector('.message-content');
+            
+            // 添加到DOM
+            chatBox.appendChild(currentAiMessageElement);
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            try {
+                // 构建请求数据
+                const requestData = {
+                    model: MODEL_NAME,
+                    messages: [
+                        {
+                            role: "user",
+                            content: prompt
+                        }
+                    ],
+                    temperature: 0.7,
+                    max_tokens: 2048,
+                    stream: true
+                };
+
+                const response = await fetch(SILICONFLOW_API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${SILICONFLOW_API_KEY}`
+                    },
+                    body: JSON.stringify(requestData)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder();
+                let buffer = '';
+                let fullResponse = '';
+                let hasStartedResponse = false;
+
+                while (true) {
+                    const { done, value } = await reader.read();
+                    
+                    if (done) break;
+                    
+                    buffer += decoder.decode(value, { stream: true });
+                    const lines = buffer.split('\n');
+                    
+                    buffer = lines.pop() || '';
+                    
+                    for (const line of lines) {
+                        if (line.startsWith('data: ') && line !== 'data: [DONE]') {
+                            try {
+                                const data = JSON.parse(line.slice(6));
+                                
+                                if (data.choices && data.choices[0].delta) {
+                                    const delta = data.choices[0].delta;
+                                    
+                                    // 处理思考过程
+                                    if (delta.reasoning_content) {
+                                        currentThinkingContent += delta.reasoning_content;
+                                    }
+                                    
+                                    // 处理最终回答
+                                    if (delta.content) {
+                                        // 如果是第一次收到内容，隐藏思考指示器
+                                        if (!hasStartedResponse) {
+                                            hasStartedResponse = true;
+                                            stopThinkingTimer();
+                                        }
+                                        
+                                        fullResponse += delta.content;
+                                        messageContent.textContent = fullResponse;
+                                    }
+                                    
+                                    chatBox.scrollTop = chatBox.scrollHeight;
+                                }
+                            } catch (e) {
+                                console.error('解析流数据出错:', e);
+                            }
+                        }
+                    }
+                }
+
+                // 完成响应，保存到历史记录
+                const messageData = {
+                    id: currentMessageId,
+                    role: 'assistant',
+                    content: fullResponse,
+                    thinking: currentThinkingContent
+                };
+                
+                chatHistory.push(messageData);
+                saveChatHistory();
+
+            } catch (error) {
+                console.error('API调用错误:', error);
+                messageContent.textContent = '抱歉，服务暂时不可用，请稍后重试。';
+                stopThinkingTimer();
+            }
+
+            currentAiMessageElement = null;
+            currentMessageId = null;
+        }
+
+        // 创建消息元素
+        function createMessageElement(role) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${role}-message`;
+            
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'message-content';
+            
+            messageDiv.appendChild(contentDiv);
+            return messageDiv;
+        }
+
+        // 添加消息到聊天框
+        function addMessage(role, content) {
+            const messageElement = createMessageElement(role);
+            messageElement.querySelector('.message-content').textContent = content;
+            chatBox.appendChild(messageElement);
+            chatBox.scrollTop = chatBox.scrollHeight;
+            
+            // 添加到聊天历史
+            chatHistory.push({
+                role: role,
+                content: content
+            });
+            
+            saveChatHistory();
+        }
+
+        // 更新上下文信息显示
+        function updateContextInfo() {
+            contextInfo.textContent = '系统正在使用上下文（记忆最近3轮对话）';
+        }
+
+        // 清除聊天
+        function clearChat() {
+            if (isGenerating) return;
+            
+            if (confirm('确定要清除所有对话记录吗？')) {
+                chatHistory = [];
+                chatBox.innerHTML = '<div class="message ai-message"><div class="message-content">您好！我是基于DeepSeek-R1模型的AI助手，现在通过硅基流动API为您服务。请问有什么可以帮助您的吗？</div></div>';
+                saveChatHistory();
+            }
+        }
+
+        // 保存聊天历史
+        function saveChatHistory() {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(chatHistory));
+        }
+
+        // 加载聊天历史
+        function loadChatHistory() {
+            const savedHistory = localStorage.getItem(STORAGE_KEY);
+            if (savedHistory) {
+                chatHistory = JSON.parse(savedHistory);
+                
+                // 清空聊天框，只显示欢迎消息
+                chatBox.innerHTML = '<div class="message ai-message"><div class="message-content">您好！我是基于DeepSeek-R1模型的AI助手，现在通过硅基流动API为您服务。请问有什么可以帮助您的吗？</div></div>';
+                
+                // 重新加载历史消息
+                chatHistory.forEach(message => {
+                    const messageElement = createMessageElement(message.role);
+                    messageElement.querySelector('.message-content').textContent = message.content;
+                    chatBox.appendChild(messageElement);
+                });
+            }
+        }
+
+        // 切换主题
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem(THEME_KEY, isDarkMode ? 'dark' : 'light');
+        }
+
+        // 加载主题
+        function loadTheme() {
+            const savedTheme = localStorage.getItem(THEME_KEY);
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+        }
+
+        // 初始化应用
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
 </html>
-&copy; 2000 - <span id="current-year"></span> 3946554330@qq.com
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-document.getElementById('current-year').textContent = new Date().getFullYear();
-});
-</script>
